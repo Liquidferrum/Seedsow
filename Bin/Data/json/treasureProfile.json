@@ -380,7 +380,7 @@
       "maxMeleeWeaponWieldTier": 400,
       "minMissileWeaponWieldTier": 250,
       "maxMissileWeaponWieldTier": 360,
-      "minCasterWieldTier": 310,
+      "minCasterWieldTier": 0,
       "maxCasterWieldTier": 355,
 
       "minArmorWieldTier": 5,
