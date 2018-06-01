@@ -1864,6 +1864,16 @@ void CTreasureFactory::MutateMissileWeapon(CWeenieObject *newItem, CWieldTier *w
 
 void CTreasureFactory::MutateCaster(CWeenieObject *newItem, CWieldTier *wieldTier, sItemCreationInfo &creationInfo, CTreasureTier *tier, CTreasureProfileCategory *category, CItemTreasureProfileEntry *entry)
 {
+
+	//rolls for mana conversion bonus and applies it to the caster item if true
+	if (wieldTier->maxManaConversionBonus > 0 && getRandomNumberExclusive(100) < wieldTier->manaConversionBonusChance * 100 * (1 + (creationInfo.qualityModifier * 2)))
+	{
+		double manaConversionMod = round(getRandomDouble(0, wieldTier->maxManaConversionBonus / 100, eRandomFormula::favorMid, 2, creationInfo.qualityModifier), 2);
+		if (manaConversionMod > 0)
+			newItem->m_Qualities.SetFloat(MANA_CONVERSION_MOD_FLOAT, manaConversionMod);
+	}
+
+
 	if (wieldTier->weaponSkillRequired > 0)
 	{
 		std::vector<STypeSkill> possibleRequirements;
@@ -1902,12 +1912,6 @@ void CTreasureFactory::MutateCaster(CWeenieObject *newItem, CWieldTier *wieldTie
 			break;
 		}
 
-		if (wieldTier->maxManaConversionBonus > 0 && getRandomNumberExclusive(100) < wieldTier->manaConversionBonusChance * 100 * (1 + (creationInfo.qualityModifier * 2)))
-		{
-			double manaConversionMod = round(getRandomDouble(0, wieldTier->maxManaConversionBonus / 100, eRandomFormula::favorMid, 2, creationInfo.qualityModifier), 1);
-			if (manaConversionMod > 0)
-				newItem->m_Qualities.SetFloat(MANA_CONVERSION_MOD_FLOAT, manaConversionMod);
-		}
 
 		if (wieldTier->maxElementalDamageMod > 0)
 		{
