@@ -3353,8 +3353,8 @@
       },
       {
         "weaponSkillRequired": 290,
-        "minElementalDamageMod": 0.0,
-        "maxElementalDamageMod": 0.0,
+        "minElementalDamageMod": 0.1,
+        "maxElementalDamageMod": 2.0,
         "maxManaConversionBonus": 10.0,
         "maxMeleeDefenseBonus": 15.0,
         "maxMissileDefenseBonus": 2.5,
@@ -3385,8 +3385,8 @@
       },
       {
         "weaponSkillRequired": 310,
-        "minElementalDamageMod": 0.0,
-        "maxElementalDamageMod": 0.0,
+        "minElementalDamageMod": 2.0,
+        "maxElementalDamageMod": 5.0,
         "maxManaConversionBonus": 10.0,
         "maxMeleeDefenseBonus": 15.0,
         "maxMissileDefenseBonus": 2.5,
@@ -3417,8 +3417,8 @@
       },
       {
         "weaponSkillRequired": 330,
-        "minElementalDamageMod": 0.0,
-        "maxElementalDamageMod": 0.0,
+        "minElementalDamageMod": 5.0,
+        "maxElementalDamageMod": 8.0,
         "maxManaConversionBonus": 10.0,
         "maxMeleeDefenseBonus": 15.0,
         "maxMissileDefenseBonus": 2.5,
@@ -3449,8 +3449,8 @@
       },
       {
         "weaponSkillRequired": 355,
-        "minElementalDamageMod": 0.0,
-        "maxElementalDamageMod": 0.0,
+        "minElementalDamageMod": 8.0,
+        "maxElementalDamageMod": 10.0,
         "maxManaConversionBonus": 10.0,
         "maxMeleeDefenseBonus": 15.0,
         "maxMissileDefenseBonus": 2.5,
